@@ -1,5 +1,7 @@
+import { Text } from '@mantine/core';
+
 function App() {
-  return <div className="App">HelloWorld</div>;
+  return <Text>HelloWorld</Text>;
 }
 
 export default App;
