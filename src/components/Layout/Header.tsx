@@ -1,21 +1,20 @@
 import { ActionIcon, Burger, Header, Title } from '@mantine/core';
 import { RiPatreonFill } from 'react-icons/ri';
+import { useUIStore } from '../../hooks';
 import useStyles from './styles';
 
-interface AppHeaderProps {
-  opened: boolean;
-  setOpened: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export function AppHeader(props: AppHeaderProps) {
-  const { opened, setOpened } = props;
+export function AppHeader() {
   const { classes } = useStyles();
+  const [opened, toggleOpened] = useUIStore((state) => [
+    state.navBarOpened,
+    state.toggleNavBar,
+  ]);
 
   return (
     <Header className={classes.flex_spaced} height={60} p="md">
       <Burger
         opened={opened}
-        onClick={() => setOpened((o) => !o)}
+        onClick={toggleOpened}
         size="sm"
         sx={(theme) => ({ color: theme.colors.gray[6] })}
         mr="xl"
