@@ -6,14 +6,17 @@ import {
   Stack,
   Text,
   Title,
-  useMantineColorScheme,
 } from '@mantine/core';
 import { RiMoonFill, RiPatreonFill, RiSunLine } from 'react-icons/ri';
+import { useUIStore } from '../../hooks';
 import useStyles from './styles';
 
 export function NotHeader() {
   const { classes } = useStyles();
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const [colorScheme, toggleColorScheme] = useUIStore((state) => [
+    state.colorScheme,
+    state.toggleColorScheme,
+  ]);
 
   return (
     <Header className={classes.flex_space_between} height={60} p="md">
