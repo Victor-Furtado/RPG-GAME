@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
-  flex_spaced: {
+  flex_space_between: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',

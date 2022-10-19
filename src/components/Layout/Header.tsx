@@ -11,7 +11,7 @@ export function AppHeader() {
   ]);
 
   return (
-    <Header className={classes.flex_spaced} height={60} p="md">
+    <Header className={classes.flex_space_between} height={60} p="md">
       <Burger
         opened={opened}
         onClick={toggleOpened}

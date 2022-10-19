@@ -16,7 +16,7 @@ export function NotHeader() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <Header className={classes.flex_spaced} height={60} p="md">
+    <Header className={classes.flex_space_between} height={60} p="md">
       <Title style={{ textAlign: 'center' }}>GAME</Title>
       <ActionIcon
         variant="filled"
@@ -37,7 +37,7 @@ export function NotFooter() {
   const { classes } = useStyles();
 
   return (
-    <Footer className={classes.flex_spaced} height={60} p="md">
+    <Footer className={classes.flex_space_between} height={60} p="md">
       <Button fullWidth leftIcon={<RiPatreonFill size={18} />}>
         Check our Patreon
       </Button>
@@ -49,7 +49,7 @@ export function NotApp() {
   const { classes } = useStyles();
 
   return (
-    <div style={{ height: '100%' }} className={classes.flex_spaced}>
+    <div style={{ height: '100%' }} className={classes.flex_space_between}>
       <Stack my="auto" mx="auto" style={{ textAlign: 'center' }}>
         <Title order={2}>This app doesnt support this device size.</Title>
         <Text>
