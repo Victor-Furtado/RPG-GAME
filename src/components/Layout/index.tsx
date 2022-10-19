@@ -1,7 +1,9 @@
 import { AppShell } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { ReactNode } from 'react';
+import { AppFooter } from './Footer';
 import { AppHeader } from './Header';
+import { AppLeftBar } from './LeftBar';
 import { NotApp, NotFooter, NotHeader } from './NotFit';
 import useStyles from './styles';
 
@@ -22,8 +24,9 @@ function Layout(props: LayoutProps) {
         }}
         navbarOffsetBreakpoint="sm"
         asideOffsetBreakpoint="sm"
-        footer={<NotFooter />}
+        footer={<AppFooter />}
         header={<AppHeader />}
+        navbar={<AppLeftBar />}
       >
         {children}
       </AppShell>
